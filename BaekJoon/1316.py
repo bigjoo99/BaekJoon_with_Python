@@ -1,0 +1,15 @@
+N=int(input())
+
+count =0
+
+for i in range(N):
+    word=input()
+    error = 0
+    for index in range (len(word)-1):
+        if word[index] != word[index+1]:
+            new_word = word[index+1:]
+            if new_word.count(word[index]) > 0:
+                error = error+1
+    if error ==0:       
+        count =count+1    
+print(count)

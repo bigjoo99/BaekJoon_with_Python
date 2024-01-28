@@ -1,0 +1,25 @@
+import sys
+
+input = sys.stdin.readline
+
+N = int(input())
+
+arr = []
+
+for i in range(N):
+    arr.append(list(map(int, input().split())))
+    
+arr.sort(key=lambda x: [x[1], x[0]])
+
+end = -1
+cnt = 0
+
+for i in range(N):
+   if arr[i][0] == arr[i][1]:
+       cnt+=1
+       end = arr[i][1]
+   elif end <= arr[i][0]:
+       cnt+=1
+       end = arr[i][1]
+       
+print(cnt)
