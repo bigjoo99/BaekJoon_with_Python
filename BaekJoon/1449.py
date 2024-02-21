@@ -3,7 +3,7 @@ n , l = map(int, input().split())
 arr = list(map(int, input().split()))
 
 arr.sort()
-cnt = 0
+cnt = 1
 x = arr[0]
 
 for i in arr[1:]:
