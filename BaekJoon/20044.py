@@ -2,13 +2,11 @@ n = int(input())
 
 arr = list(map(int, input().split()))
 
-arr.sort()
-
+x = sorted(arr)
+y = sorted(arr, reverse=True)
 result = []
 
-for i in range(n//2):
-    a = arr[i]
-    b = arr[-1-i]
-    result.append(a+b)
+for i in range(n):
+    result.append(x[i]+y[i])
     
 print(min(result))
