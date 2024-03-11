@@ -2,4 +2,4 @@ import math
 
 N = int(input())
 
-print(int(math.sqrt(N))
+print(int(math.sqrt(N)))
