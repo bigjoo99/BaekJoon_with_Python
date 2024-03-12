@@ -3,11 +3,11 @@ import sys
 input = sys.stdin.readline
 
 N, M = map(int, input().split())
-arr = list(map(int,input().split()))
+arr = [0] + list(map(int,input().split()))
 
-prefix = [0 for _ in range(N+1)]
+prefix = [0]*(N+1)
 
-for x in range(N):
+for x in range(1,N):
     prefix[x] = prefix[x-1] + arr[x]
 
 cnt = 0
