@@ -11,13 +11,13 @@ def binary_search(arr, target, start, end):
         return binary_search(arr, target, start, mid-1)
 
 T = int(input())
+for _ in range(T):
+    n = int(input())
+    arr_n = list(map(int, input().split()))
+    arr_n.sort()
 
-n = int(input())
-arr_n = list(map(int, input().split()))
-arr_n.sort()
+    m = int(input())
+    arr_m = list(map(int, input().split()))
 
-m = int(input())
-arr_m = list(map(int, input().split()))
-
-for x in arr_m:
-    binary_search(arr_n, x, 0, n-1)
+    for x in arr_m:
+        binary_search(arr_n, x, 0, n-1)
