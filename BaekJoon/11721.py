@@ -1,7 +1,4 @@
 s = input()
 
-
-for i in range(len(s)):
-    if i%10 == 0:
-        print()
-    print(s[i], end = '')
+for i in range(0,len(s),10):
+    print(s[i:i+10])
